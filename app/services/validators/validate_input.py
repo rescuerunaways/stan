@@ -5,6 +5,7 @@ def validate_field(value, data):
     if value not in data:
         raise InvalidRequest()
 
+
 def validate_payload(p):
     validate_field("image",p)
     validate_field("showImage", p["image"])

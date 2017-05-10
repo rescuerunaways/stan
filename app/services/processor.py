@@ -7,7 +7,7 @@ from app.services.validators.validate_input import validate_field, validate_payl
 def process(data):
     json = loads(data)
     validate_field("payload", json)
-    return dumps(convert(json))
+    return convert(json)
 
 
 def convert(data):
