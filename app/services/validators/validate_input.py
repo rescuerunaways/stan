@@ -11,3 +11,5 @@ def validate_payload(p):
     validate_field("showImage", p["image"])
     validate_field("slug", p)
     validate_field("title", p)
+
+

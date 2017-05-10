@@ -20,7 +20,7 @@ def f(p):
 
 def m(p):
     validate_payload(p)
-    return {"image": p["image"]["showImage"], "slug": p["slug"], "title": _normalize(p["title"])}
+    return {"image": p["image"]["showImage"], "slug": p["slug"], "title": (p["title"])}
 
 
 def _episodes_present(p):
@@ -31,5 +31,5 @@ def _drm_enabled(p):
     return "drm" in p and p["drm"] is True
 
 
-def _normalize(title):
-    return re.sub(' \(.*\)', '', title)
+# def _normalize(title):
+#     return re.sub(' \(.*\)', '', title)
