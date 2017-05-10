@@ -4,7 +4,7 @@ from app import app
 from app.services.processor import process
 
 
-@app.route('/alive', methods=['GET'])
+@app.route('/', methods=['GET'])
 def alive():
     return 'alive'
 
