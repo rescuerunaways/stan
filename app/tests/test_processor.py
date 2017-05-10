@@ -1,6 +1,6 @@
 import os.path
 import unittest
-from json import loads,dumps
+from json import loads, dumps
 
 
 from app.errors.error import InvalidRequest
