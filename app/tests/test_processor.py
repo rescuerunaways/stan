@@ -1,6 +1,7 @@
 import os.path
 import unittest
-from json import loads
+from json import loads,dumps
+
 
 from app.errors.error import InvalidRequest
 from app.services import processor
@@ -14,7 +15,9 @@ def mock(m):
 class ProcessorTestCase(unittest.TestCase):
     def test_process(self):
         processed_list = processor.process(mock("payload_ok_in"))
-        self.assertEquals(loads(mock("payload_ok_out")), loads(processed_list))
+        print(mock("payload_ok_out"))
+        print(processed_list)
+        self.assertEquals(loads(mock("payload_ok_out")), loads(dumps(processed_list)))
 
     def test_process_400(self):
         with self.assertRaises(InvalidRequest):
